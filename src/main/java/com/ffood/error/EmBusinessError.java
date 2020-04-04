@@ -2,6 +2,7 @@ package com.ffood.error;
 
 
 public enum EmBusinessError implements CommonError {
+
     //通用错误类型10001
     PARAMETER_VALIDATION_ERROR(10001, "参数不合法"),
     UNKNOWN_ERROR(10002, "未知错误"),
@@ -14,15 +15,15 @@ public enum EmBusinessError implements CommonError {
     STOCK_NOT_ENOUGH(30001, "库存不足"),
     ;
 
-    EmBusinessError(int errCode, String errMsg) {
-        this.errCode = errCode;
-        this.errMsg = errMsg;
-    }
 
 
     private int errCode;
     private String errMsg;
 
+    EmBusinessError(int errCode, String errMsg) {
+        this.errCode = errCode;
+        this.errMsg = errMsg;
+    }
 
     @Override
     public int getErrCode() {
